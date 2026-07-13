@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import { Link, useParams, Navigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowLeft, BookOpen, Brain, Layers, Quote } from 'lucide-react'
+import { ArrowLeft, BookOpen, Brain, Layers, Quote, CheckCircle2, Circle } from 'lucide-react'
 import { getBookBySlug } from '../data/books/index.js'
+import { useReadBooks } from '../hooks/useReadBooks.js'
 import Quiz from '../components/Quiz.jsx'
 import Flashcards from '../components/Flashcards.jsx'
 
@@ -36,6 +37,7 @@ export default function BookDetail() {
   const { slug } = useParams()
   const book = getBookBySlug(slug)
   const [tab, setTab] = useState('rozbor')
+  const { isRead, toggleRead } = useReadBooks()
 
   if (!book) return <Navigate to="/knihy" replace />
 
@@ -47,31 +49,46 @@ export default function BookDetail() {
           Zpět na knihy
         </Link>
 
-        <div className="mt-6">
-          <h1 className="text-3xl font-semibold text-white sm:text-4xl">{book.title}</h1>
-          {book.originalTitle && (
-            <p className="mt-1 text-gray-500">Originál: {book.originalTitle}</p>
-          )}
-          <p className="mt-2 text-gray-400">
-            {book.authorSlug ? (
-              <Link to={`/autori/${book.authorSlug}`} className="hover:text-white hover:underline">
-                {book.author}
-              </Link>
-            ) : (
-              book.author
-            )}{' '}
-            · {book.year}
-          </p>
-          <div className="mt-4 flex flex-wrap gap-2">
-            {[book.basics.literaryKind, book.basics.literaryGenre].map((tag) => (
-              <span
-                key={tag}
-                className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-gray-300"
-              >
-                {tag}
-              </span>
-            ))}
+        <div className="mt-6 flex items-start justify-between gap-4">
+          <div>
+            <h1 className="text-3xl font-semibold text-white sm:text-4xl">{book.title}</h1>
+            {book.originalTitle && (
+              <p className="mt-1 text-gray-500">Originál: {book.originalTitle}</p>
+            )}
+            <p className="mt-2 text-gray-400">
+              {book.authorSlug ? (
+                <Link to={`/autori/${book.authorSlug}`} className="hover:text-white hover:underline">
+                  {book.author}
+                </Link>
+              ) : (
+                book.author
+              )}{' '}
+              · {book.year}
+            </p>
           </div>
+
+          <button
+            onClick={() => toggleRead(book.slug)}
+            className={`flex shrink-0 items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+              isRead(book.slug)
+                ? 'border-emerald-400/40 bg-emerald-400/10 text-emerald-300'
+                : 'border-white/10 text-gray-400 hover:border-white/25 hover:text-gray-200'
+            }`}
+          >
+            {isRead(book.slug) ? <CheckCircle2 className="h-4 w-4" /> : <Circle className="h-4 w-4" />}
+            Přečteno
+          </button>
+        </div>
+
+        <div className="mt-4 flex flex-wrap gap-2">
+          {[book.basics.literaryKind, book.basics.literaryGenre].map((tag) => (
+            <span
+              key={tag}
+              className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-gray-300"
+            >
+              {tag}
+            </span>
+          ))}
         </div>
 
         <div className="mt-8 flex gap-2 border-b border-white/10">
