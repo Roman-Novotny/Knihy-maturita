@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Segoe UI', system-ui, Roboto, sans-serif;
+  --font-serif: Georgia, 'Times New Roman', serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #0b0c10;
+  color: #e5e7eb;
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: rgba(192, 132, 252, 0.35);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #c084fc 0%, #f472b6 50%, #fbbf24 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
