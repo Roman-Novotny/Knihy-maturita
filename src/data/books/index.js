@@ -9,8 +9,9 @@ import { valkaSMloky } from './valkaSMloky.js'
 import { krysar } from './krysar.js'
 import { audience } from './audience.js'
 import { kytice } from './kytice.js'
+import { cirkusHumberto } from './cirkusHumberto.js'
 
-export const BOOKS = [malyPrinc, petrALucie, rur, farmaZvirat, starecAMore, lakomec, revizor, valkaSMloky, krysar, audience, kytice]
+export const BOOKS = [malyPrinc, petrALucie, rur, farmaZvirat, starecAMore, lakomec, revizor, valkaSMloky, krysar, audience, kytice, cirkusHumberto]
 
 export function getBookBySlug(slug) {
   return BOOKS.find((book) => book.slug === slug)
