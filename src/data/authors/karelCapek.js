@@ -19,11 +19,10 @@ export const karelCapek = {
     'Věc Makropulos (1922)',
     'Krakatit (1924)',
     'Povídky z jedné kapsy / Povídky z druhé kapsy (1929)',
-    'Válka s mloky (1936)',
     'Bílá nemoc (1937)',
   ],
 
-  worksHere: ['r-u-r'],
+  worksHere: ['r-u-r', 'valka-s-mloky'],
 
   context:
     'Čapek je považován za jednu z nejvýznamnějších osobností meziválečné české kultury a za jednoho ze zakladatelů moderní světové science fiction – jeho díla varují před zneužitím techniky a moci a kladou důraz na humanismus, toleranci a relativitu jednoznačných pravd.',
