@@ -3,8 +3,9 @@ import { petrALucie } from './petrALucie.js'
 import { rur } from './rur.js'
 import { farmaZvirat } from './farmaZvirat.js'
 import { starecAMore } from './starecAMore.js'
+import { lakomec } from './lakomec.js'
 
-export const BOOKS = [malyPrinc, petrALucie, rur, farmaZvirat, starecAMore]
+export const BOOKS = [malyPrinc, petrALucie, rur, farmaZvirat, starecAMore, lakomec]
 
 export function getBookBySlug(slug) {
   return BOOKS.find((book) => book.slug === slug)
