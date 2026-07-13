@@ -3,6 +3,7 @@ export const malyPrinc = {
   title: 'Malý princ',
   originalTitle: 'Le Petit Prince',
   author: 'Antoine de Saint-Exupéry',
+  authorSlug: 'saint-exupery',
   year: 1943,
 
   basics: {
@@ -41,12 +42,15 @@ export const malyPrinc = {
   },
 
   plot: [
-    'Vypravěč, pilot, havaruje s letadlem na Sahaře a setkává se s podivným chlapcem – Malým princem, který ho požádá, aby mu nakreslil ovci.',
-    'Princ postupně vypráví o své domovské planetce B612, o pyšné a náročné růži, kterou miloval, ale kvůli jejím rozmarům od ní odešel.',
-    'Na cestě k Zemi navštívil šest malých planet, na každé potkal jednoho podivného dospělého: krále bez poddaných, domýšlivce toužícího po obdivu, pijana, který pije, aby zapomněl na hanbu z pití, byznysmena posedlého počítáním hvězd jako majetku, lampáře věrně plnícího nesmyslný rozkaz, a zeměpisce, který nikdy nikam necestoval.',
-    'Sedmou zastávkou je Země: princ se setká s hadem, s květinou v poušti, s ozvěnou v horách a nakonec s liškou, která ho naučí, co znamená „ochočit si“ někoho a že podstatné je neviditelné pro oči.',
-    'Princ nachází pilota v poušti; společně, bez vody, tráví několik dní, během kterých princ dovypráví svůj příběh a oba si vytvoří přátelství.',
-    'Na konci se princ nechá uštknout hadem, aby se jeho tělo uvolnilo a on se mohl vrátit ke své růži na planetce B612. Pilot je zachráněn a o rok později celé setkání vzpomínkově popisuje.',
+    'Vypravěč, pilot, havaruje s letadlem na Sahaře, více než tisíc kilometrů od nejbližšího lidského obydlí, a musí motor opravit sám. Hned první ráno ho probudí podivný chlapec – Malý princ – s žádostí, aby mu nakreslil ovci.',
+    'Princ vypráví o své domovské planetce B612, velké sotva jako dům: má na ní tři sopky (dvě aktivní, jednu vyhaslou), které si každé ráno jako komíny čistí, a musí soustavně vytrhávat semenáčky baobabů – kdyby jim nechal volný průchod, svými kořeny by mu planetku rozervaly.',
+    'Na planetce mu vyrostla jediná, marnivá a náročná růže s několika trny, na kterou vášnivě žárlil a o kterou pečoval, ale zároveň ho unavovaly její rozmary a přehnaná stesky. Byl tak nešťastný, že jednoho dne sledoval západ slunce čtyřiačtyřicetkrát – planetka je tak malá, že stačí posunout židli o pár kroků. Nakonec od růže i planetky odešel, aby poznal vesmír.',
+    'Na cestě k Zemi navštívil šest malých planetek, na každé potkal jednoho podivného dospělého: krále bez poddaných, který vládne jen sám sobě; domýšlivce toužícího po neustálém obdivu; pijana, jenž pije, aby zapomněl na hanbu z toho, že pije – začarovaný kruh; byznysmena, který "vlastní" hvězdy jen tím, že je počítá; lampáře, jenž na příliš rychle rotující planetce věrně, ale bezmyšlenkovitě rozsvěcuje a zhasíná lampu každou minutu; a zeměpisce, který nikdy sám necestoval a čeká na "objevitele", od nichž teprve zapisuje fakta.',
+    'Sedmou zastávkou je Země. Princ přistane v poušti, kde se nejprve setká s hadem, který mluví v hádankách a nabízí mu, že ho kdykoliv "vrátí" tam, odkud přišel. Prochází pouští, potká ozvěnu v horách a v zahradě žasne, že na Zemi rostou tisíce růží stejných jako ta jeho – to ho zprvu zdrtí, protože si myslel, že jeho růže je ve vesmíru jediná.',
+    'Na Zemi se pak setká s liškou, která ho požádá, aby si ji "ochočil". Vysvětlí mu, že ochočení znamená vytvořit si pouto, a naučí ho rituál: princ má chodit vždy ve stejnou hodinu a s každým dnem si sedat o kousek blíž, aby si na sebe mohli zvyknout. Díky lišce princ pochopí, že jeho růže je výjimečná ne proto, že by byla jediná svého druhu, ale proto, že si ji ochočil a věnoval jí čas – a že "je zodpovědný navždy za to, co si ochočil". Liška mu při loučení svěří i klíčovou větu o tom, že správně vidíme jen srdcem.',
+    'Princ pak najde pilota u studny uprostřed pouště – nachází ji po osmi dnech, kdy pilotovi dochází voda, a společně ji večer za hvězdného nebe najdou a napijí se z ní; pilot v ní najde chuť podobnou dárku k Vánocům. Během těch dní spolu tráví čas, opravuje letadlo a princ mu dovypráví celý svůj příběh.',
+    'Uplyne rok od princova příchodu na Zemi, přesně na místě, kde přistál. Princ se rozhodne vrátit ke své růži a nechá se proto uštknout žlutým hadem, aby jeho tělo, příliš těžké na to, aby ho vzal s sebou, mohlo zůstat na Zemi, zatímco on sám (jeho duše/podstata) se vrátí na planetku B612.',
+    'Pilot je nakonec zachráněn a o šest let později se k celému setkání vzpomínkově vrací. V závěrečné kapitole prosí čtenáře, aby se mu ozvali, pokud by v poušti na podobné místo, pod podobnou hvězdu, náhodou také narazili na malého chlapce se zlatými vlasy – a aby se, když se v noci podívají na hvězdy, usmáli, protože na jedné z nich se možná směje princ.',
   ],
 
   characters: [
@@ -159,5 +163,6 @@ export const malyPrinc = {
     { label: 'Antoine de Saint-Exupéry – Wikipedie (cs)', url: 'https://cs.wikipedia.org/wiki/Antoine_de_Saint-Exup%C3%A9ry' },
     { label: 'Le Petit Prince (1943) – oficiální stránka dědictví Saint-Exupéryho', url: 'https://www.antoinedesaintexupery.org/ouvrage/le-petit-prince-1943/' },
     { label: 'The Little Prince – Britannica', url: 'https://www.britannica.com/topic/The-Little-Prince' },
+    { label: 'The Little Prince Summary – Book Analysis', url: 'https://bookanalysis.com/antoine-de-saint-exupery/the-little-prince/summary/' },
   ],
 }

@@ -53,7 +53,14 @@ export default function BookDetail() {
             <p className="mt-1 text-gray-500">Originál: {book.originalTitle}</p>
           )}
           <p className="mt-2 text-gray-400">
-            {book.author} · {book.year}
+            {book.authorSlug ? (
+              <Link to={`/autori/${book.authorSlug}`} className="hover:text-white hover:underline">
+                {book.author}
+              </Link>
+            ) : (
+              book.author
+            )}{' '}
+            · {book.year}
           </p>
           <div className="mt-4 flex flex-wrap gap-2">
             {[book.basics.literaryKind, book.basics.literaryGenre].map((tag) => (
