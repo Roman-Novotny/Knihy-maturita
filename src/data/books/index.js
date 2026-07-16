@@ -12,8 +12,9 @@ import { kytice } from './kytice.js'
 import { cirkusHumberto } from './cirkusHumberto.js'
 import { smrtKrasnychSrncu } from './smrtKrasnychSrncu.js'
 import { marysa } from './marysa.js'
+import { romeoAJulie } from './romeoAJulie.js'
 
-export const BOOKS = [malyPrinc, petrALucie, rur, farmaZvirat, starecAMore, lakomec, revizor, valkaSMloky, krysar, audience, kytice, cirkusHumberto, smrtKrasnychSrncu, marysa]
+export const BOOKS = [malyPrinc, petrALucie, rur, farmaZvirat, starecAMore, lakomec, revizor, valkaSMloky, krysar, audience, kytice, cirkusHumberto, smrtKrasnychSrncu, marysa, romeoAJulie]
 
 export function getBookBySlug(slug) {
   return BOOKS.find((book) => book.slug === slug)
