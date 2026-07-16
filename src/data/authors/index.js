@@ -9,8 +9,9 @@ import { viktorDyk } from './viktorDyk.js'
 import { vaclavHavel } from './vaclavHavel.js'
 import { erben } from './erben.js'
 import { eduardBass } from './eduardBass.js'
+import { otaPavel } from './otaPavel.js'
 
-export const AUTHORS = [saintExupery, romainRolland, karelCapek, georgeOrwell, ernestHemingway, moliere, gogol, viktorDyk, vaclavHavel, erben, eduardBass]
+export const AUTHORS = [saintExupery, romainRolland, karelCapek, georgeOrwell, ernestHemingway, moliere, gogol, viktorDyk, vaclavHavel, erben, eduardBass, otaPavel]
 
 export function getAuthorBySlug(slug) {
   return AUTHORS.find((author) => author.slug === slug)
