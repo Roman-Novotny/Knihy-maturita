@@ -5,6 +5,8 @@ import Knihy from './pages/Knihy.jsx'
 import BookDetail from './pages/BookDetail.jsx'
 import Autori from './pages/Autori.jsx'
 import AuthorDetail from './pages/AuthorDetail.jsx'
+import Seznamy from './pages/Seznamy.jsx'
+import ListDetail from './pages/ListDetail.jsx'
 import OProjektu from './pages/OProjektu.jsx'
 
 export default function App() {
@@ -16,6 +18,8 @@ export default function App() {
         <Route path="knihy/:slug" element={<BookDetail />} />
         <Route path="autori" element={<Autori />} />
         <Route path="autori/:slug" element={<AuthorDetail />} />
+        <Route path="seznamy" element={<Seznamy />} />
+        <Route path="seznamy/:id" element={<ListDetail />} />
         <Route path="o-projektu" element={<OProjektu />} />
       </Route>
     </Routes>

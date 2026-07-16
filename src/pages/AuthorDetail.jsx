@@ -6,6 +6,7 @@ import { getAuthorBySlug } from '../data/authors/index.js'
 import { getBookBySlug } from '../data/books/index.js'
 import Quiz from '../components/Quiz.jsx'
 import Flashcards from '../components/Flashcards.jsx'
+import AddToListMenu from '../components/AddToListMenu.jsx'
 
 function Section({ title, children }) {
   return (
@@ -46,8 +47,13 @@ export default function AuthorDetail() {
         </Link>
 
         <div className="mt-6">
-          <h1 className="text-3xl font-semibold text-white sm:text-4xl">{author.name}</h1>
-          <p className="mt-2 text-gray-400">{author.lifespan}</p>
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <h1 className="text-3xl font-semibold text-white sm:text-4xl">{author.name}</h1>
+              <p className="mt-2 text-gray-400">{author.lifespan}</p>
+            </div>
+            <AddToListMenu item={{ type: 'author', slug: author.slug }} />
+          </div>
 
           {books.length > 0 && (
             <div className="mt-4 flex flex-wrap gap-2">

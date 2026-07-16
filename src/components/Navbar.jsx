@@ -7,6 +7,7 @@ const LINKS = [
   { to: '/', label: 'Domů', end: true },
   { to: '/knihy', label: 'Knihy' },
   { to: '/autori', label: 'Autoři' },
+  { to: '/seznamy', label: 'Seznamy' },
   { to: '/o-projektu', label: 'O projektu' },
 ]
 

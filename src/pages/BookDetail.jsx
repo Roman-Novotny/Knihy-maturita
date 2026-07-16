@@ -6,6 +6,7 @@ import { getBookBySlug } from '../data/books/index.js'
 import { useReadBooks } from '../hooks/useReadBooks.js'
 import Quiz from '../components/Quiz.jsx'
 import Flashcards from '../components/Flashcards.jsx'
+import AddToListMenu from '../components/AddToListMenu.jsx'
 
 function Section({ number, title, children }) {
   return (
@@ -67,17 +68,20 @@ export default function BookDetail() {
             </p>
           </div>
 
-          <button
-            onClick={() => toggleRead(book.slug)}
-            className={`flex shrink-0 items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
-              isRead(book.slug)
-                ? 'border-emerald-400/40 bg-emerald-400/10 text-emerald-300'
-                : 'border-white/10 text-gray-400 hover:border-white/25 hover:text-gray-200'
-            }`}
-          >
-            {isRead(book.slug) ? <CheckCircle2 className="h-4 w-4" /> : <Circle className="h-4 w-4" />}
-            Přečteno
-          </button>
+          <div className="flex shrink-0 items-center gap-2">
+            <button
+              onClick={() => toggleRead(book.slug)}
+              className={`flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+                isRead(book.slug)
+                  ? 'border-emerald-400/40 bg-emerald-400/10 text-emerald-300'
+                  : 'border-white/10 text-gray-400 hover:border-white/25 hover:text-gray-200'
+              }`}
+            >
+              {isRead(book.slug) ? <CheckCircle2 className="h-4 w-4" /> : <Circle className="h-4 w-4" />}
+              Přečteno
+            </button>
+            <AddToListMenu item={{ type: 'book', slug: book.slug }} />
+          </div>
         </div>
 
         <div className="mt-4 flex flex-wrap gap-2">
